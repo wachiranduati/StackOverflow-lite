@@ -1,3 +1,13 @@
+body{
+	font-family: kokila;
+	font-size: 120%;
+	background-image: url('../static/images/image2.jpg');
+	background-size: 100%;
+	background-position: center;
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+}
 .db_color{
 	color: #112F41;
 }
@@ -115,3 +125,156 @@
 	margin-top: 10%;
 }
 /*SIGN IN PAGE*/
+
+/* LANDING PAGE */
+.nuvlandnpg input:focus{
+	outline: none;
+	color: white;
+	border: 2px solid white;
+	background-color: black;
+}
+
+.nuvlandnpg input[type=text]{
+	font-size: 18px;
+}
+
+.main20 a {
+	text-decoration: none;
+	color: #112F41;
+	line-height: 1.2;
+	margin-left: 20%;
+}
+.footer {
+	background-color: #068587;padding: 10px 20px;color: white;
+}
+.main20{
+	border: 2px solid #068587;
+	 width: 20%;
+	 display: inline-block;
+	 background-color: white;
+	 padding: 10px;
+	height: 30vh;
+	margin-left: 2%;
+	padding-bottom: 15px;
+	position: fixed;
+	right: 10px;
+}
+.questionslndn{
+	border: 1px solid rgba(187, 187, 187, .4);width: 90%;
+	display: inline-block;height: 70px;
+	position: relative;
+	top: -10px;
+	background-color: rgba(6, 133, 135, 0.1);
+}
+.qstntime{
+	width: 10%;
+	display: inline-block;
+}
+.qstrspn {
+	width: 10%;
+	display: inline-block;
+	float: right;
+}
+.tx-cntr{
+	text-align: center;
+}
+.userprofile{
+	height: 60px; width: 60px;
+	 border-radius: 50%;
+	 display: inline-block;
+	 background-image: url('../static/images/image1.jpg');
+	border: 2px solid #112F41;
+	margin-right: 10px;
+}
+.qstnitslf{
+	display: inline-block;
+}
+
+.qstnitslf a h4{
+	padding: 0;margin: 0;
+}
+.nuvlandnpg{
+	background-color: white;
+	height: 60px;box-shadow: 3px 2px 5px #068587;
+}
+
+.nuvlandnpg a img{
+	max-height: 55px;
+	display: inline;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.nuvlandnpg form{
+	display: inline;
+}
+
+.nuvlandnpg form input{
+	padding: 15px;
+	border: 2px solid #112F41;
+	width: 50%;
+	display: inline;
+	position: relative;
+	top: -20px;
+}
+
+.nuvlandnpg p{
+	display: inline;
+	font-size: 152%;
+	position: relative;
+	top: -20px;
+	left:120px;
+	color: #112F41;
+}
+
+.nuvlandnpg .userprofile{
+	height: 40px;
+	 width: 40px;
+	  border-radius: 50%;
+	  display: inline-block;
+	  background-image: url('../static/images/image2.jpg');
+	position: relative;
+	top:5px;right: 84px;
+	border: 2px solid #112F41;
+	float: right;
+}
+
+.mncontner{
+	padding: 20px;display: flex;flex-wrap: wrap; color: #112F41;
+}
+
+.mncontner .main80{
+	border: 2px solid #068587;
+	width: 70%;display: inline-block;
+	margin-right: 1%;
+	background-color: white;
+	padding: 12px;margin-left: 2%;
+}
+.mncontner .main80 a h2{
+	float: right;margin: 0;
+}
+
+.mncontner .main80>h4{
+	clear: both;margin-left: 9%;
+}
+
+.questionslndn{
+	padding: 4px 0 10px 0;
+}
+
+.questionslndn .qstntime{
+	width: 10%;display: inline-block;
+}
+
+.questionslndn .qstntime .time{
+	display: inline-block;
+}
+
+.qstnitslf p {
+	display: inline-block;
+	padding: 7px 4px 3px 4px;
+	background-color: rgba(187, 187, 187, .4);
+	margin-top: 5px;
+	border: 1px solid rgba(187, 187, 187, .6);
+}
+
+/* LANDING PAGE */
