@@ -20,5 +20,5 @@ Our app supports the following features:
 ## Authors
 Wachira Nduati * initial work * - [WN]  (@wachiranduati)
 
-## License
+
 
