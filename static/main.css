@@ -1,0 +1,111 @@
+.db_color{
+	color: #112F41;
+}
+
+.lb_color{
+	color: #068587;
+}
+
+.db-bckg{
+	background-color: #112F41;
+}
+
+.lb-bckg{
+	background-color: #068587;
+}
+
+/*SIGN UP PAGE*/
+
+.overlay{
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(17, 47, 65, 0.9);
+}
+.signinbox{
+	height: 70%;
+	width: 70%;
+	background-color: white;
+	position: relative;
+	top: 15%;
+	left: 15%;
+	padding: 0;
+	display:flex;
+	flex-direction: nowrap;
+	box-shadow: 2px 2px 10px black;
+}
+
+.signinbox div{
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
+}
+
+.signUpimgbox{
+	width: 50%;
+	height: 100%;
+	background-image: url('../static/images/image1.jpg');
+	background-size: cover;
+}
+
+.signUpform{
+	width: 50%;
+	height: 100%;
+}
+.welcomesigupside{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(17, 47, 65, 0.7);
+	/*display: flex;*/
+}
+.welcomesigupside img{
+	/*display: block;*/
+	margin-top: 15%;
+	margin-left: 23%;
+}
+
+.welcomesigupside{
+	/*flex-direction: wrap;*/
+	/*box-sizing: border-box;*/
+	flex-shrink: 0;
+	min-width: auto;
+	text-overflow: ellipsis;
+}
+.signUpform form input{
+	display: block;
+	margin-bottom: 2%;
+	margin-left: 10%;
+	height: 40px;
+	width: 70%;
+	border: 1px solid white;
+	border-bottom: 2px solid #112F41;
+	box-shadow: none;
+}
+.signupform form input ::webkit-input-placeholder{
+	color: black;
+}
+.signUpform>form input[type=submit]{
+	border:3px solid #112F41;
+	margin-top: 4%;
+	border-radius: 40px;
+	color: white;
+	background-color: rgba(17, 47, 65, 0.9);
+}
+.signUpform a {
+	float: right;margin-right: 1%;
+}
+.signUpform input:focus{
+			outline: none;
+		}
+
+.welcomesigupside h1, .welcomesigupside p {
+	color: white;
+	text-align: center;
+}
+.signUpform h1{
+	text-align: center;
+}
+.signUpform small{
+	display: block;
+	text-align: center;
+}
+/*SIGN UP PAGE*/
