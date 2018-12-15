@@ -277,4 +277,38 @@ body{
 	border: 1px solid rgba(187, 187, 187, .6);
 }
 
+.main20qstn{
+	border: 2px solid #068587;
+	 width: 20%;
+	 display: inline-block;
+	 background-color: white;
+	 padding: 10px;
+	margin-left: 2%;
+	padding-bottom: 15px;
+	position: fixed;
+	right: 10px;
+	margin-bottom: 1%;
+}
+
+.main80 form.pstqstnform input{
+	display: block;
+	padding: 10px;
+	width: 90%;
+	margin-bottom: 2%;
+	border: 2px solid #112F41;
+}
+.main80 form.pstqstnform textarea{
+	width: 90%;
+	border: 2px solid #112F41;
+	padding: 10px;
+}
+.main80 form.pstqstnform input[type=submit]{
+	background-color: #068587;
+	color: white;
+	text-transform: uppercase;
+	border: none;
+}
+form.pstqstnform{
+	margin-left: 2%;
+}
 /* LANDING PAGE */
