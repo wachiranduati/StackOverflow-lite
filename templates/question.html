@@ -23,7 +23,7 @@
 <body>
 	<div class="overlay">
 		<div class="nuvlandnpg">
-			<a href="index.html"><img src="{{ url_for('static', filename='images/stack.svg') }}" alt="StackOverflow-lite logo"></a>
+			<a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/stack.svg') }}" alt="StackOverflow-lite logo"></a>
 			<form action="#" method="GET">
 				<input type="text" placeholder="Search here">
 			</form>
@@ -39,12 +39,12 @@
 				<div class="boxusrcicon">
 					<div class="usericonans">
 						<div class="userprof"></div>
-						<div><h3 class="tx-cntr">Manchester United</h3></div>
+						<div><h3 class="tx-cntr">Judy Jones</h3></div>
 						<div><h1 class="tx-cntr">456 Answers</h1></div>
 					</div>
 				<div class="qstndetail">
 					<div class="theqst">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro vitae placeat vel adipisci tenetur deleniti fugiat laborum beatae natus, sint necessitatibus! Deserunt adipisci ipsam quam voluptatem corporis, saepe perferendis nulla.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nihil reprehenderit nisi doloribus explicabo, porro tenetur sunt nulla eveniet atque. Cupiditate necessitatibus tempora consequuntur ea totam itaque, id fugiat libero.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus perspiciatis cum quis tenetur esse distinctio, officiis libero, numquam neque quas, blanditiis ad, officia exercitationem minus illum quos! Eveniet, culpa, delectus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur qui dolor sit cupiditate expedita vitae, provident sint culpa ipsum ad minima nulla, explicabo labore numquam voluptatibus, animi id tempora rem!</p>
+						<p>{{question.body}}</p>
 					</div>
 					<div>
 					<h5>POSTED ON: Jan 12 2017</h5>

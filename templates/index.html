@@ -60,7 +60,7 @@
 
 			</div>
 			<div class="main20">
-				<h4 style="text-align: center;">Most Popular Questions</h4>
+				<h4>Most Popular Questions</h4>
 				{% for question in questions[:5] %}
 				<!-- {{question.title.replace(' ','_').replace('?','')}}_/{{question.id}} -->
 				 <a href="{{ url_for('question') }}/{{question.title.replace(' ','_').replace('?','')}}_/{{question.id}}"><small>{{question.title}}</small></a><br>
