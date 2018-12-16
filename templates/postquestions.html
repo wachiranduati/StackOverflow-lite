@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>StackOverflow Ask a  Questions</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<style type="text/css">
+		
+		.overlay{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255, 255, 255, .8);
+		}
+		.questionslndn{
+			margin-bottom: 2%;
+		}
+		.main20{
+			margin-top: 23%;
+		}
+	</style>
+</head>
+<body>
+	<div class="overlay">
+		<div class="nuvlandnpg">
+			<a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/stack.svg') }}" alt="StackOverflow-lite logo"></a>
+			<form action="#" method="GET">
+				<input type="text" placeholder="Search here">
+			</form>
+			<p>Judy Jones</p>
+			<div class="userprofile">
+				
+			</div>
+		</div>
+		<div class="maincontainer db_colo mncontner">
+			<div class="main80">
+				<h2 class="tx-cntr">Post Your Question</h2>
+				
+				<!-- FEED BEGINS HERE -->
+					<form action="#" method="POST" class="pstqstnform">
+						<label for="title">Your question title goes here: </label>
+						<input type="text" name="title" placeholder="Question title">
+						<label for="qstdetail">Write your question in detail here: </label>
+						<textarea name="qstdetail" id="qstdetail" cols="30" rows="10" placeholder="Write your question here in full detail"></textarea><br>
+						<label for="tags">Your tags go here: (they must be comma seperated) eg: apples, bananas, melons</label>
+						<input type="text" name="tags" placeholder="jobs, bananas, food, apricots">
+						<input type="submit" value="post Question">
+					</form>
+				
+
+				<!-- FEED ENDS HERE -->
+
+			</div>
+			<div class="main20qstn">
+				<h4 class="tx-cntr">Guide to posting questions</h4>
+				<ol>
+					<li>First Search to Ensure that such a quesion was previously answered</li>
+					<li>Give you question a descriptive title</li>
+					<li>Write the contents of your question in great detail</li>
+					<li>Include tags to your question that relate to it directly</li>
+					<li>Your tags must be comma seperated eg apple, banana, melon</li>
+					<li>Post the question and wait</li>
+				</ol>
+			</div>
+			<div class="main20">
+				<h4>MOST POPULAR QUESTIONS</h4>
+				<ol>
+					{% for question in questions[:5] %}
+				<li> <a href="{{ url_for('question') }}/{{question.title.replace(' ','_').replace('?','')}}_/{{question.id}}"><small>{{question.title}}</small></a><br>
+				</li>
+				{% endfor %}
+				</ol>
+			</div>
+		</div>
+		<div class="footer">
+			&#0169 <small>copyright 2019 StackOverflow-lite</small>
+			
+		</div>
+	</div>
+</body>
+</html>
