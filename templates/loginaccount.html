@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>StackOverflow SignIn</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<style type="text/css">
+		body{
+			background-image: url('{{ url_for('static', filename='images/image2.jpg') }}');
+			background-size: 100%;
+			background-position: center;
+			margin: 0;
+			padding: 0;
+			background-repeat: no-repeat;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="overlay">
+		<div class="signinbox">
+			<div class="signUpform loginform">
+				<h1>SignIn</h1>
+				<small>and start discovering</small>
+				<form action="#" method="POST">
+					<input type="email" placeholder="Email">
+					<input type="password" placeholder="Password">
+					<input type="submit" value="SignIn">
+				</form>
+					<a href="{{ url_for('signup') }}">Don't have an account?</a> 
+			</div>
+			<div class="signUpimgbox">
+				<div class="welcomesigupside">
+					<!-- <h1>StackOverflow-lite</h1> -->
+					<a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/stack.svg') }}" alt="StackOverflow-lite logo"></a>
+					<h1>WELCOME</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Voluptatum veritatis, ipsum inventore placeat<br> enim fugiat cumque molestiae <br> unde sequi, ex voluptas rem itaque,<br> in quae, a officiis quo reiciendis nostrum.</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>
