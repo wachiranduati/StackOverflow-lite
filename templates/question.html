@@ -44,7 +44,7 @@
 					</div>
 				<div class="qstndetail">
 					<div class="theqst">
-						<p>{{question.body}}</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet excepturi inventore nihil, eligendi, fugiat mollitia hic voluptas eum dignissimos adipisci velit, distinctio magni architecto veniam eos perspiciatis quod. Dolores, modi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nihil recusandae voluptatem aliquam veniam? Maxime, maiores, commodi! Aliquid officia, perspiciatis iusto fugiat soluta eligendi fuga, explicabo facilis dolores nisi, autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam, labore earum aperiam rerum. Veniam mollitia similique amet, pariatur odit distinctio minima explicabo, inventore excepturi, voluptate natus omnis quo cum.</p>
 					</div>
 					<div>
 					<h5>POSTED ON: Jan 12 2017</h5>
@@ -57,6 +57,32 @@
 				<!-- FEED BEGINS HERE -->
 
 						
+						<!-- ONE FEED START-->
+								<div style="display: flex;align-items: flex-start;margin: 1% 0;">
+									<div class="ansprof"></div>
+							<div class="ansboxprof" style="">
+								<p class="ansitsf">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo iusto ab consequuntur, odio, soluta possimus consectetur! Tempore, nobis. Quo iusto perspiciatis, eaque at neque facilis vel assumenda quasi illo nobis!</p>
+								<div class="votebuttons">
+									<!-- <div class="iconpck">
+									</div> -->
+									<a href="#"><span class="mdi mdi-thumb-up"></span></a> &nbsp;
+									<div class="boxpinline"><p class="pinline">13 Upvotes</p></div>
+
+									<!-- <div class="iconpck">
+									</div> -->
+									<a href="#"><span class="mdi mdi-thumb-down"></span></a>&nbsp;
+									<div class="boxpinline"><p class="pinline">22 Downvote</p></div>
+
+									<div><p class="pinline">POSTED ON:</p></div>
+									<div><p class="pinline">JAN 13 12BC:</p></div>
+
+									<div style="margin-left: 2%;"><a class="acceptbtn" href="#" style="">Accept Answer</a></div>
+
+								</div>
+							</div>
+								</div>
+						<!-- ONE FEED END-->
+
 						<!-- ONE FEED START-->
 								<div style="display: flex;align-items: flex-start;margin: 1% 0;">
 									<div class="ansprof"></div>
@@ -111,31 +137,8 @@
 						<!-- ONE FEED END-->
 
 
-<!-- ONE FEED START-->
-								<div style="display: flex;align-items: flex-start;margin: 1% 0;">
-									<div class="ansprof"></div>
-							<div class="ansboxprof" style="">
-								<p class="ansitsf">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo iusto ab consequuntur, odio, soluta possimus consectetur! Tempore, nobis. Quo iusto perspiciatis, eaque at neque facilis vel assumenda quasi illo nobis!</p>
-								<div class="votebuttons">
-									<!-- <div class="iconpck">
-									</div> -->
-									<a href="#"><span class="mdi mdi-thumb-up"></span></a> &nbsp;
-									<div class="boxpinline"><p class="pinline">13 Upvotes</p></div>
 
-									<!-- <div class="iconpck">
-									</div> -->
-									<a href="#"><span class="mdi mdi-thumb-down"></span></a>&nbsp;
-									<div class="boxpinline"><p class="pinline">22 Downvote</p></div>
 
-									<div><p class="pinline">POSTED ON:</p></div>
-									<div><p class="pinline">JAN 13 12BC:</p></div>
-
-									<div style="margin-left: 2%;"><a class="acceptbtn" href="#" style="">Accept Answer</a></div>
-
-								</div>
-							</div>
-								</div>
-						<!-- ONE FEED END-->
 
 
 
@@ -168,17 +171,17 @@
 
 			</div>
 			<div class="main20qstn qstntop">
-				<h2 class="tx-cntr"><a href="postquestions.html">Post A question?</a></h2>
+				<h2 class="tx-cntr"><a href="{{ url_for('question') }}">Post A question?</a></h2>
 				
 			</div>
 			<div class="main20">
 				<h4>MOST POPULAR QUESTIONS</h4>
-				1. <a href="question.html">Why bananas?</a><br>
-				2. <a href="question.html">How many cups of java?</a><br>
-				3. <a href="question.html">Who said git?</a><br>
-				1. <a href="question.html">Why bananas?</a><br>
-				2. <a href="question.html">How many cups of java?</a><br>
-				3. <a href="question.html">Who said git?</a><br>
+				<ol>
+					{% for question in questions[:5] %}
+				<li> <a href="{{ url_for('question') }}/{{question.title.replace(' ','_').replace('?','')}}_/{{question.id}}"><small>{{question.title}}</small></a><br>
+				</li>
+				{% endfor %}
+				</ol>
 			</div>
 		</div>
 		<div class="footer">

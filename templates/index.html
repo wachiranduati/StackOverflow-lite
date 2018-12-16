@@ -35,23 +35,72 @@
 				<!-- FEED BEGINS HERE -->
 
 				<!-- Automated feed right here -->
-				{% for question in questions %}
 					<div class="userprofile">
 				
 				</div>
 				<div class="questionslndn">
 					<div class="qstntime">
-						<div class="time"><h3 class="tx-cntr">{{question.posted_on}}</h3></div>
+						<div class="time"><h3 class="tx-cntr">12HRS AGO</h3></div>
 					</div>
 					<div class="qstnitslf">
-						<a href="{{ url_for('question') }}/{{question.title.replace(' ','_').replace('?','')}}_/{{question.id}}"><h4>{{question.title}}</h4></a>
-						<p>{{' ,'.join(question.tags)}}</p>
+						<a href="{{ url_for('question') }}/bananas_and_food/1"><h4>Is it true that bananas are bad for you?</h4></a>
+						<p>Bananas, Water, Uganda, Mu7</p>
 					</div>
 					<div class="qstrspn">
-						<h3 class="tx-cntr">{{question.answers}} Answers</h3>
+						<h3 class="tx-cntr">45 Answers</h3>
 					</div>
 				</div>
-				{% endfor %}
+				<!-- Automated feed right here -->
+				<!-- Automated feed right here -->
+					<div class="userprofile">
+				
+				</div>
+				<div class="questionslndn">
+					<div class="qstntime">
+						<div class="time"><h3 class="tx-cntr">12HRS AGO</h3></div>
+					</div>
+					<div class="qstnitslf">
+						<a href="{{ url_for('question') }}/bananas_and_food/1"><h4>Is it true that bananas are bad for you?</h4></a>
+						<p>Bananas, Water, Uganda, Mu7</p>
+					</div>
+					<div class="qstrspn">
+						<h3 class="tx-cntr">45 Answers</h3>
+					</div>
+				</div>
+				<!-- Automated feed right here -->
+				<!-- Automated feed right here -->
+					<div class="userprofile">
+				
+				</div>
+				<div class="questionslndn">
+					<div class="qstntime">
+						<div class="time"><h3 class="tx-cntr">12HRS AGO</h3></div>
+					</div>
+					<div class="qstnitslf">
+						<a href="{{ url_for('question') }}/bananas_and_food/1"><h4>Is it true that bananas are bad for you?</h4></a>
+						<p>Bananas, Water, Uganda, Mu7</p>
+					</div>
+					<div class="qstrspn">
+						<h3 class="tx-cntr">45 Answers</h3>
+					</div>
+				</div>
+				<!-- Automated feed right here -->
+				<!-- Automated feed right here -->
+					<div class="userprofile">
+				
+				</div>
+				<div class="questionslndn">
+					<div class="qstntime">
+						<div class="time"><h3 class="tx-cntr">12HRS AGO</h3></div>
+					</div>
+					<div class="qstnitslf">
+						<a href="{{ url_for('question') }}/bananas_and_food/1"><h4>Is it true that bananas are bad for you?</h4></a>
+						<p>Bananas, Water, Uganda, Mu7</p>
+					</div>
+					<div class="qstrspn">
+						<h3 class="tx-cntr">45 Answers</h3>
+					</div>
+				</div>
 				<!-- Automated feed right here -->
 
 				
@@ -61,10 +110,12 @@
 			</div>
 			<div class="main20">
 				<h4>Most Popular Questions</h4>
-				{% for question in questions[:5] %}
-				<!-- {{question.title.replace(' ','_').replace('?','')}}_/{{question.id}} -->
-				 <a href="{{ url_for('question') }}/{{question.title.replace(' ','_').replace('?','')}}_/{{question.id}}"><small>{{question.title}}</small></a><br>
+				<ol>
+					{% for question in questions[:5] %}
+				<li> <a href="{{ url_for('question') }}/{{question.title.replace(' ','_').replace('?','')}}_/{{question.id}}"><small>{{question.title}}</small></a><br>
+				</li>
 				{% endfor %}
+				</ol>
 			</div>
 		</div>
 		<div class="footer">

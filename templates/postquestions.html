@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>StackOverflow Ask a  Questions</title>
-	<link rel="stylesheet" type="text/css" href="../static/main.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 	<style type="text/css">
 		
 		.overlay{
@@ -22,7 +22,7 @@
 <body>
 	<div class="overlay">
 		<div class="nuvlandnpg">
-			<a href="index.html"><img src="../static/images/stack.svg" alt="StackOverflow-lite logo"></a>
+			<a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/stack.svg') }}" alt="StackOverflow-lite logo"></a>
 			<form action="#" method="GET">
 				<input type="text" placeholder="Search here">
 			</form>
@@ -63,12 +63,12 @@
 			</div>
 			<div class="main20">
 				<h4>MOST POPULAR QUESTIONS</h4>
-				1. <a href="question.html">Why bananas?</a><br>
-				2. <a href="question.html">How many cups of java?</a><br>
-				3. <a href="question.html">Who said git?</a><br>
-				1. <a href="question.html">Why bananas?</a><br>
-				2. <a href="question.html">How many cups of java?</a><br>
-				3. <a href="question.html">Who said git?</a><br>
+				<ol>
+					{% for question in questions[:5] %}
+				<li> <a href="{{ url_for('question') }}/{{question.title.replace(' ','_').replace('?','')}}_/{{question.id}}"><small>{{question.title}}</small></a><br>
+				</li>
+				{% endfor %}
+				</ol>
 			</div>
 		</div>
 		<div class="footer">

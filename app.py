@@ -21,7 +21,7 @@ questions = [
 	'tags': ['Germany','Hitler','History','Fried Chicken','Krugler'],
 	'answers': 34,
 	'id': 2,
-	'body': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro vitae placeat vel adipisci tenetur deleniti fugiat laborum beatae natus, sint necessitatibus! Deserunt adipisci ipsam quam voluptatem corporis, saepe perferendis nulla.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nihil reprehenderit nisi doloribus explicabo, porro tenetur sunt nulla eveniet atque. Cupiditate necessitatibus tempora consequuntur ea totam itaque, id fugiat libero.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus perspiciatis cum quis tenetur esse distinctio, officiis libero, numquam neque quas, blanditiis ad, officia exercitationem minus illum quos! Eveniet, culpa, delectus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur qui dolor sit cupiditate expedita vitae, provident sint culpa ipsum ad minima nulla, explicabo labore numquam voluptatibus, animi id tempora rem!'
+	'body': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, odit. Beatae atque distinctio quod sequi, vitae rem accusamus vel! Itaque aut dolore qui, architecto provident doloribus beatae nam ut quod.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro vitae placeat vel adipisci tenetur deleniti fugiat laborum beatae natus, sint necessitatibus! Deserunt adipisci ipsam quam voluptatem corporis, saepe perferendis nulla.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nihil reprehenderit nisi doloribus explicabo, porro tenetur sunt nulla eveniet atque. Cupiditate necessitatibus tempora consequuntur ea totam itaque, id fugiat libero.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus perspiciatis cum quis tenetur esse distinctio, officiis libero, numquam neque quas, blanditiis ad, officia exercitationem minus illum quos! Eveniet, culpa, delectus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur qui dolor sit cupiditate expedita vitae, provident sint culpa ipsum ad minima nulla, explicabo labore numquam voluptatibus, animi id tempora rem!'
 	
 	},
 	{
@@ -81,7 +81,7 @@ questions = [
 	'answers': 34,
 	'id': 8,
 	'body': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro vitae placeat vel adipisci tenetur deleniti fugiat laborum beatae natus, sint necessitatibus! Deserunt adipisci ipsam quam voluptatem corporis, saepe perferendis nulla.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nihil reprehenderit nisi doloribus explicabo, porro tenetur sunt nulla eveniet atque. Cupiditate necessitatibus tempora consequuntur ea totam itaque, id fugiat libero.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus perspiciatis cum quis tenetur esse distinctio, officiis libero, numquam neque quas, blanditiis ad, officia exercitationem minus illum quos! Eveniet, culpa, delectus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur qui dolor sit cupiditate expedita vitae, provident sint culpa ipsum ad minima nulla, explicabo labore numquam voluptatibus, animi id tempora rem!'
-	
+
 	
 	}
 ]
@@ -100,15 +100,16 @@ def signin():
 
 @app.route('/question/<question>/<int:id>')
 def view_question(question, id):
-	for qus in questions:
-		if qus['id'] == id:
-			question = qus
+	#the questions on their own
+	# for qus in questions:
+	# 	if qus['id'] == id:
+	# 		question = qus
 
-	return render_template('question.html', question=question)
+	return render_template('question.html', question=question, questions=questions)
 
 @app.route('/question')
 def question():
-	return render_template('postquestions.html')
+	return render_template('postquestions.html', questions=questions)
 
 
 if __name__ == "__main__":

@@ -366,7 +366,7 @@ form.pstqstnform{
 	margin: 0; padding: 5px;
 }
 .votebuttons{
-	display:flex;align-items: flex-start;margin-left: 2%;
+	display:flex;align-items: flex-start;margin-left: 2%;font-size: 80%;
 }
 .iconpck{
 	border: 1px solid black; width: 20px; height: 20px;margin-right: 1%;
@@ -378,7 +378,7 @@ form.pstqstnform{
 	height: 20px;margin-right: 10%;
 }
 .theqst{
-	min-height: 50px;background-color: rgba(17, 47, 65, 0.1);padding: 2px 10px 0 10px;
+	min-height: 30vh;background-color: rgba(17, 47, 65, 0.1);padding: 2px 10px 0 10px;
 }
 .qstndetail{
 	width: 85%;
