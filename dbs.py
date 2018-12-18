@@ -80,3 +80,7 @@ class dbs_datastr():
 		
 		}
 	]
+
+	def addQuestion(self,body):
+		self.questions.append(body)
+		
