@@ -2,7 +2,7 @@ class dbs_datastr():
 	def __init__(self):
 		self.questions = [
 		{
-		'title': 'How does a water jeski move',
+		'title': 'KewesekiHow does a water jeski move',
 		'posted_on': '12HRS AGO',
 		'tags': ['watersports','ocean','summer','highend','science'],
 		'answers': 12,
@@ -79,8 +79,24 @@ class dbs_datastr():
 
 		
 		}
+
 	]
+	
 
 	def addQuestion(self,body):
+		#set answer, posted on and answers to 0
 		self.questions.append(body)
+		return self.questions[-2:]
+
+	def deleteQuestion(self, id):
+		""" This function  deletes a question """
+		for self.question in self.questions:
+			if self.question['id'] == id:
+				self.questions.remove(self.question)
+				return self.questions
+
+
+
+
+
 		

@@ -15,8 +15,7 @@ def view_questions():
 @app.route('/questions', methods=['POST'])
 def post_question():
 	body = request.get_json()
-	# dbs_datastr.questions
-	pass
+	return jsonify(dbs_datastr.addQuestion(body))
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	app.run(debug=True) 
