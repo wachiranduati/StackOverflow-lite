@@ -17,5 +17,16 @@ def post_question():
 	body = request.get_json()
 	return jsonify(dbs_datastr.addQuestion(body))
 
+@app.route('/questions/<int:id>', methods=['DELETE'])
+def delete_question(id):
+	return jsonify(dbs_datastr.deleteQuestion(id))
+
+
+@app.route('/questions/<int:questionId>', methods=['PUT'])
+def update_question(questionId):
+	body = request.get_json()
+	return jsonify(dbs_datastr.updateQuestions(questionId,body))
+
+
 if __name__ == "__main__":
 	app.run(debug=True) 

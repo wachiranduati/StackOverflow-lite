@@ -1,3 +1,5 @@
+from validation import PostValidator
+
 class dbs_datastr():
 	def __init__(self):
 		self.questions = [
@@ -81,6 +83,8 @@ class dbs_datastr():
 		}
 
 	]
+
+	postValid = PostValidator()
 	
 
 	def addQuestion(self,body):
@@ -95,6 +99,17 @@ class dbs_datastr():
 				self.questions.remove(self.question)
 				return self.questions
 
+
+	def updateQuestions(self,id, body):
+		""" This function will update a question"""
+		for self.question in self.questions:
+			if self.question['id'] == id:
+				self.question['title'] = body['title']
+				self.question['tags'] = body['tags']
+				self.question['body'] = body['body']
+				# return "Updated the the questions <{}>".format(self.question['title'])
+				return self.questions
+				break
 
 
 
