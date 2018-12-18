@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from dbs import dbs_datastr
 
 app = Flask(__name__)
@@ -9,9 +9,13 @@ def index():
 	return('Welcome home bruh')
 
 @app.route('/questions', methods=['GET'])
-def questions():
-	# return('This is the questions part')
+def view_questions():
 	return jsonify(dbs_datastr.questions)
 
+@app.route('/questions', methods=['POST'])
+def post_question():
+	body = request.get_json()
+	return jsonify(dbs_datastr.addQuestion(body))
+
 if __name__ == "__main__":
-	app.run(debug=True)
+	app.run(debug=True) 
