@@ -1,4 +1,4 @@
-from validation import PostValidator
+from validation import STValidator
 
 class dbs_datastr():
 	def __init__(self):
@@ -84,7 +84,7 @@ class dbs_datastr():
 
 	]
 
-	postValid = PostValidator()
+	postValid = STValidator()
 	
 
 	def addQuestion(self,body):

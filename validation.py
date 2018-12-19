@@ -1,4 +1,4 @@
-class PostValidator():
+class STValidator():
 	"""docstring for PostValidator"""
 	
 
@@ -33,5 +33,12 @@ class PostValidator():
 			return body
 		else:
 			return({"Error": "Please ensure that  your title is larger than 14 characters"})
+
+	def validateURLinput(self, id):
+		""" This method validates the url id provided in place of an id """
+		if not isinstance(id, int):
+			return({"Error":"Please provide an ID of type integer"})
+		else:
+			return id
 		
 		
