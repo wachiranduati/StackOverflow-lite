@@ -1,4 +1,4 @@
-from validation import PostValidator
+from validation import STValidator
 
 class dbs_datastr():
 	def __init__(self):
@@ -84,13 +84,27 @@ class dbs_datastr():
 
 	]
 
-	postValid = PostValidator()
+		self.postValid = STValidator()
 	
 
-	def addQuestion(self,body):
+	def addQuestion(self, body):
+		""" This method add the new question to our datastore"""
 		#set answer, posted on and answers to 0
-		self.questions.append(body)
-		return self.questions[-2:]
+		#validate the questions first
+
+		if body['title'] != '' and len(body['title']) > 14:
+			if len(body['tags']) != 0:
+				if body['body'] != '' and len(body['body']) > 20:
+					body['id'] = int(self.questions[-1]['id'] + 1)
+					self.questions.append(body)
+					return self.questions[-2:]
+				else:
+					return({"Error":"You're message cannot be smaller than 20 characters"})
+			else:
+				return({"Error":"Make sure to provide atleast 1 tag"})
+		else:
+			return({"Error": "Please ensure that  your title is larger than 14 characters"})
+
 
 	def deleteQuestion(self, id):
 		""" This function  deletes a question """
@@ -102,14 +116,26 @@ class dbs_datastr():
 
 	def updateQuestions(self,id, body):
 		""" This function will update a question"""
-		for self.question in self.questions:
-			if self.question['id'] == id:
-				self.question['title'] = body['title']
-				self.question['tags'] = body['tags']
-				self.question['body'] = body['body']
-				# return "Updated the the questions <{}>".format(self.question['title'])
-				return self.questions
-				break
+
+		if body['title'] != '' and len(body['title']) > 14:
+			if len(body['tags']) != 0:
+				if body['body'] != '' and len(body['body']) > 20:
+					for self.question in self.questions:
+						if self.question['id'] == id:
+							self.question['title'] = body['title']
+							self.question['tags'] = body['tags']
+							self.question['body'] = body['body']
+							# return "Updated the the questions <{}>".format(self.question['title'])
+							return self.questions
+							break
+				else:
+					return({"Error":"You're message cannot be smaller than 20 characters"})
+			else:
+				return({"Error":"Make sure to provide atleast 1 tag"})
+		else:
+			return({"Error": "Please ensure that  your title is larger than 14 characters"})
+
+		
 
 
 
