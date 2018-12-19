@@ -97,13 +97,13 @@ class dbs_datastr():
 				if body['body'] != '' and len(body['body']) > 20:
 					body['id'] = int(self.questions[-1]['id'] + 1)
 					self.questions.append(body)
-					return self.questions[-2:]
+					return [self.questions[-2:],"success"]
 				else:
-					return({"Error":"You're message cannot be smaller than 20 characters"})
+					return {"Error":"You're message cannot be smaller than 20 characters"}
 			else:
-				return({"Error":"Make sure to provide atleast 1 tag"})
+				return {"Error":"Make sure to provide atleast 1 tag"}
 		else:
-			return({"Error": "Please ensure that  your title is larger than 14 characters"})
+			return {"Error": "Please ensure that  your title is larger than 14 characters"}
 
 
 	def deleteQuestion(self, id):
@@ -111,7 +111,7 @@ class dbs_datastr():
 		for self.question in self.questions:
 			if self.question['id'] == id:
 				self.questions.remove(self.question)
-				return self.questions
+				return [self.questions,"success"]
 
 
 	def updateQuestions(self,id, body):
@@ -126,14 +126,14 @@ class dbs_datastr():
 							self.question['tags'] = body['tags']
 							self.question['body'] = body['body']
 							# return "Updated the the questions <{}>".format(self.question['title'])
-							return self.questions
+							return [self.questions, "success"]
 							break
 				else:
-					return({"Error":"You're message cannot be smaller than 20 characters"})
+					return {"Error":"You're message cannot be smaller than 20 characters"}
 			else:
-				return({"Error":"Make sure to provide atleast 1 tag"})
+				return {"Error":"Make sure to provide atleast 1 tag"}
 		else:
-			return({"Error": "Please ensure that  your title is larger than 14 characters"})
+			return {"Error": "Please ensure that  your title is larger than 14 characters"}
 
 		
 
