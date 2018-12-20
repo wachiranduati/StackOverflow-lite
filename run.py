@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask
 from app.api.v1.models.questions import questions
 
 app = Flask(__name__)

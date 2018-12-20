@@ -1,7 +1,7 @@
 from flask import json
 import unittest
 import os
-from app import app
+from run import app
 
 class TestSTackAPI(unittest.TestCase):
 	def setUp(self):
